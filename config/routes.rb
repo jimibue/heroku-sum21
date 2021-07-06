@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   namespace :api do
     resources :things
   end
+
+  # catch all routes....
+  #https://james.com/api/things
+  get "*other", to: "static#index"
 end
